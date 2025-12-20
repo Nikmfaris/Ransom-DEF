@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Regulatory Compliance Portal | Submission</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f9; margin: 0; padding: 0; color: #333; }
+        .header { background: #003366; color: white; padding: 15px 40px; display: flex; align-items: center; justify-content: space-between; }
+        .header h1 { font-size: 18px; margin: 0; letter-spacing: 1px; }
+        .container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .notice { background: #fff3cd; border-left: 5px solid #ffecb5; padding: 15px; margin-bottom: 25px; font-size: 14px; }
+        .upload-zone { border: 2px dashed #003366; border-radius: 6px; padding: 40px; text-align: center; background: #fafafa; }
+        .upload-zone:hover { background: #f0f4f8; }
+        h2 { color: #003366; margin-top: 0; }
+        .btn { background: #003366; color: white; border: none; padding: 12px 25px; border-radius: 4px; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        .btn:hover { background: #0055aa; }
+        .btn:disabled { background: #cccccc; cursor: not-allowed; }
+        .progress-container { display: none; margin-top: 25px; }
+        .progress-bar { width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; overflow: hidden; }
+        .progress-fill { width: 0%; height: 100%; background: #28a745; transition: width 0.2s; }
+        .footer { text-align: center; font-size: 12px; color: #777; margin-top: 40px; }
+        .badge { display: inline-block; padding: 5px 10px; background: #28a745; color: white; border-radius: 3px; font-size: 11px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>GOVERNMENT AUDIT & COMPLIANCE SYSTEM (GACS)</h1>
+    <span style="font-size: 12px;">Welcome, Nik Adam | <strong>Session: SECURE</strong></span>
+</div>
+
+<div class="container">
+    <div class="badge">✓ SSL ENCRYPTED CONNECTION</div>
+    <h2>Investor KYC Folder Submission</h2>
+    
+    <div class="notice">
+        <strong>ATTENTION:</strong> As per the New Finance Act 2025, all investor details must be synchronized directly via the secure directory upload tool. Do not close this window until the synchronization is 100% complete.
+    </div>
+
+    <div class="upload-zone" id="dropZone">
+        <p>Click below to select the <strong>Investor_KYC_2025</strong> folder for synchronization.</p>
+        <button id="selectDirBtn" class="btn">SELECT FOLDER TO SYNC</button>
+    </div>
+
+    <div class="progress-container" id="progressContainer">
+        <p id="progressText" style="font-weight: bold; font-size: 14px;">Initializing encrypted upload...</p>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+        <p style="font-size: 11px; color: #888; margin-top: 5px;">Securely processing data... please wait.</p>
+    </div>
+</div>
+
+<div class="footer">
+    © 2025 National Infrastructure & Finance Ministry. All Rights Reserved. <br>
+    This portal is monitored by the Digital Security Commission.
+</div>
+
+<script src="scenario.js"></script>
+</body>
+</html>
