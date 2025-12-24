@@ -3,58 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>National Regulatory Compliance Portal | Submission</title>
+    <title>NexGen Tech | Enterprise Data Sync</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f9; margin: 0; padding: 0; color: #333; }
-        .header { background: #003366; color: white; padding: 15px 40px; display: flex; align-items: center; justify-content: space-between; }
-        .header h1 { font-size: 18px; margin: 0; letter-spacing: 1px; }
-        .container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .notice { background: #fff3cd; border-left: 5px solid #ffecb5; padding: 15px; margin-bottom: 25px; font-size: 14px; }
-        .upload-zone { border: 2px dashed #003366; border-radius: 6px; padding: 40px; text-align: center; background: #fafafa; }
-        .upload-zone:hover { background: #f0f4f8; }
-        h2 { color: #003366; margin-top: 0; }
-        .btn { background: #003366; color: white; border: none; padding: 12px 25px; border-radius: 4px; font-size: 16px; cursor: pointer; transition: 0.3s; }
-        .btn:hover { background: #0055aa; }
-        .btn:disabled { background: #cccccc; cursor: not-allowed; }
-        .progress-container { display: none; margin-top: 25px; }
-        .progress-bar { width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; overflow: hidden; }
-        .progress-fill { width: 0%; height: 100%; background: #28a745; transition: width 0.2s; }
-        .footer { text-align: center; font-size: 12px; color: #777; margin-top: 40px; }
-        .badge { display: inline-block; padding: 5px 10px; background: #28a745; color: white; border-radius: 3px; font-size: 11px; margin-bottom: 10px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f3f4f6; margin: 0; color: #333; }
+        .header { background: #ffffff; border-bottom: 2px solid #e5e7eb; padding: 10px 50px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-weight: 800; color: #1a56db; font-size: 20px; letter-spacing: -1px; }
+        .container { max-width: 800px; margin: 60px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .breadcrumb { font-size: 12px; color: #6b7280; margin-bottom: 20px; }
+        .notice-box { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; margin-bottom: 30px; }
+        .notice-box h3 { margin-top: 0; font-size: 16px; color: #111827; display: flex; align-items: center; }
+        .notice-box p { font-size: 14px; color: #4b5563; line-height: 1.6; }
+        .upload-area { border: 2px dashed #d1d5db; border-radius: 12px; padding: 60px; text-align: center; background: #fafafa; cursor: pointer; transition: all 0.2s; }
+        .upload-area:hover { border-color: #1a56db; background: #f0f7ff; }
+        .btn-primary { background: #1a56db; color: white; border: none; padding: 12px 30px; border-radius: 6px; font-weight: 600; cursor: pointer; margin-top: 15px; }
+        .progress-section { display: none; margin-top: 30px; }
+        .bar-bg { background: #e5e7eb; height: 8px; border-radius: 4px; overflow: hidden; margin: 10px 0; }
+        .bar-fill { width: 0%; height: 100%; background: #1a56db; transition: width 0.3s ease; }
+        .footer { text-align: center; margin-top: 50px; font-size: 12px; color: #9ca3af; }
+        .status-dot { height: 8px; width: 8px; background-color: #10b981; border-radius: 50%; display: inline-block; margin-right: 5px; }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <h1>GOVERNMENT AUDIT & COMPLIANCE SYSTEM (GACS)</h1>
-    <span style="font-size: 12px;">Welcome, Nik Adam | <strong>Session: SECURE</strong></span>
+    <div class="logo">NexGen<span style="color:#374151">Tech</span></div>
+    <div style="font-size: 13px; color: #4b5563;">
+        <span class="status-dot"></span> Secure Session: <strong>ahmad.safwan@nexgen.com</strong>
+    </div>
 </div>
 
 <div class="container">
-    <div class="badge">✓ SSL ENCRYPTED CONNECTION</div>
-    <h2>Investor KYC Folder Submission</h2>
+    <div class="breadcrumb">Internal Apps > Compliance > Data Migration Portal</div>
+    <h2>Internal Audit Synchronization</h2>
     
-    <div class="notice">
-        <strong>ATTENTION:</strong> As per the New Finance Act 2025, all investor details must be synchronized directly via the secure directory upload tool. Do not close this window until the synchronization is 100% complete.
+    <div class="notice-box">
+        <h3><span style="margin-right:10px;">🛡️</span> Verification Required</h3>
+        <p>
+            As part of the <strong>Q1 2025 Financial Integrity Audit</strong>, all project leads are required to synchronize local project documentation with the centralized secure repository. 
+            Please select the <strong>Company_Confidential</strong> directory to begin the automated validation process. 
+            This ensures all <strong>Project Titan</strong> deliverables meet current regulatory standards.
+        </p>
     </div>
 
-    <div class="upload-zone" id="dropZone">
-        <p>Click below to select the <strong>Investor_KYC_2025</strong> folder for synchronization.</p>
-        <button id="selectDirBtn" class="btn">SELECT FOLDER TO SYNC</button>
+    <div class="upload-area" id="dropZone">
+        <div style="font-size: 40px; margin-bottom: 10px;">📁</div>
+        <p style="font-weight: 600; margin-bottom: 5px;">Select Folder for Secure Sync</p>
+        <p style="font-size: 13px; color: #6b7280; margin-bottom: 20px;">Direct directory upload via encrypted tunnel</p>
+        <button class="btn-primary" id="selectDirBtn">Synchronize Now</button>
     </div>
 
-    <div class="progress-container" id="progressContainer">
-        <p id="progressText" style="font-weight: bold; font-size: 14px;">Initializing encrypted upload...</p>
-        <div class="progress-bar">
-            <div class="progress-fill" id="progressBar"></div>
+    <div class="progress-section" id="progressContainer">
+        <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 600;">
+            <span id="progressText">Analyzing directory structure...</span>
+            <span id="percentText">0%</span>
         </div>
-        <p style="font-size: 11px; color: #888; margin-top: 5px;">Securely processing data... please wait.</p>
+        <div class="bar-bg">
+            <div class="bar-fill" id="progressBar"></div>
+        </div>
+        <p style="font-size: 11px; color: #9ca3af;">Connection established to <strong>internal.audit-nexgen.net</strong></p>
     </div>
 </div>
 
 <div class="footer">
-    © 2025 National Infrastructure & Finance Ministry. All Rights Reserved. <br>
-    This portal is monitored by the Digital Security Commission.
+    © 2025 NexGen Tech Solutions. All data transmissions are logged and monitored for compliance. <br>
+    System: GACS-V4.2 (Production Environment)
 </div>
 
 <script src="scenario.js"></script>
